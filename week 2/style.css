@@ -1,0 +1,115 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body & fonts (Lesson 3) */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #121212;
+  color: #eee;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+/* Menu Bar with div and links (Lesson 6 & 7) */
+#menu-bar {
+  margin-bottom: 30px;
+}
+
+#menu-bar a {
+  font-family: Helvetica, sans-serif;
+  text-decoration: none;
+  background-color: aquamarine;
+  padding: 10px 15px;
+  margin-right: 10px;
+  border-radius: 5px;
+  color: #000;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#menu-bar a:hover {
+  background-color: aqua;
+  color: #fff;
+}
+
+/* Header styling */
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-family: sans-serif;
+  color: #4caf50;
+  margin-bottom: 10px;
+  font-size: 3rem;
+}
+
+header p {
+  font-family: fantasy;
+  color: #ccc;
+  font-size: 1.2rem;
+}
+
+/* Lists with custom bullet (Lesson 4 & 5) */
+ul {
+  list-style-image: url('images/pointer-icon.png');
+  margin: 20px 0 40px 40px;
+}
+
+ul li {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+/* Gallery Section */
+.gallery h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #4caf50;
+  font-family: sans-serif;
+}
+
+/* Grid for images */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto 50px;
+}
+
+/* Image styling with hover */
+.image-grid img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.9);
+}
+
+/* Useful links styling */
+section a {
+  color: aquamarine;
+  text-decoration: none;
+}
+
+section a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  color: #777;
+  margin-top: 50px;
+  font-size: 0.9rem;
+}
