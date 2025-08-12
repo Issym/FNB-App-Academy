@@ -1,0 +1,173 @@
+{
+  "info": {
+    "name": "Contact Book API",
+    "_postman_id": "b6d2e50d-3fdc-4b3e-9c91-1234567890ab",
+    "description": "Contact Book API endpoints for App Academy Week 7",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://127.0.0.1:5000"
+    },
+    {
+      "key": "token",
+      "value": ""
+    }
+  ],
+  "item": [
+    {
+      "name": "Register",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/register",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "register"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\": \"Ishmael\", \"email\": \"ishmael@example.com\", \"password\": \"Passw0rd!\"}"
+        }
+      }
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/login",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "login"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"email\": \"ishmael@example.com\", \"password\": \"Passw0rd!\"}"
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "var data = pm.response.json();",
+              "if (data.access_token) {",
+              "  pm.collectionVariables.set('token', data.access_token);",
+              "}"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Me",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/me",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "me"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Create Contact",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/contacts",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "contacts"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\": \"Ada Lovelace\", \"phone\": \"+27 82 123 4567\", \"email\": \"ada@example.com\", \"address\": \"Durban\"}"
+        }
+      }
+    },
+    {
+      "name": "List Contacts",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/contacts?q=ada&page=1&per_page=10",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "contacts"
+          ],
+          "query": [
+            {
+              "key": "q",
+              "value": "ada"
+            },
+            {
+              "key": "page",
+              "value": "1"
+            },
+            {
+              "key": "per_page",
+              "value": "10"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
