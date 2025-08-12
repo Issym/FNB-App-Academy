@@ -1,115 +1,72 @@
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Body & fonts (Lesson 3) */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #121212;
-  color: #eee;
-  padding: 20px;
-  line-height: 1.6;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0c0c0c;
+    color: white;
 }
 
-/* Menu Bar with div and links (Lesson 6 & 7) */
-#menu-bar {
-  margin-bottom: 30px;
-}
-
-#menu-bar a {
-  font-family: Helvetica, sans-serif;
-  text-decoration: none;
-  background-color: aquamarine;
-  padding: 10px 15px;
-  margin-right: 10px;
-  border-radius: 5px;
-  color: #000;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-#menu-bar a:hover {
-  background-color: aqua;
-  color: #fff;
-}
-
-/* Header styling */
 header {
-  text-align: center;
-  margin-bottom: 40px;
+    background-color: #202020;
+    padding: 20px;
+    text-align: center;
 }
 
 header h1 {
-  font-family: sans-serif;
-  color: #4caf50;
-  margin-bottom: 10px;
-  font-size: 3rem;
+    margin: 0;
+    color: #ffcc00;
 }
 
-header p {
-  font-family: fantasy;
-  color: #ccc;
-  font-size: 1.2rem;
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-/* Lists with custom bullet (Lesson 4 & 5) */
-ul {
-  list-style-image: url('images/pointer-icon.png');
-  margin: 20px 0 40px 40px;
+nav a:hover {
+    color: #ffcc00;
 }
 
-ul li {
-  margin-bottom: 10px;
-  font-size: 1.1rem;
+.intro {
+    padding: 20px;
+    text-align: center;
 }
 
-/* Gallery Section */
-.gallery h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #4caf50;
-  font-family: sans-serif;
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
 }
 
-/* Grid for images */
-.image-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 20px;
-  max-width: 900px;
-  margin: 0 auto 50px;
+.card {
+    background: #1c1c1c;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    text-align: center;
 }
 
-/* Image styling with hover */
-.image-grid img {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
-.image-grid img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.9);
+.card h3 {
+    padding: 10px;
 }
 
-/* Useful links styling */
-section a {
-  color: aquamarine;
-  text-decoration: none;
+.card:hover {
+    transform: scale(1.05);
+    cursor: pointer;
 }
 
-section a:hover {
-  text-decoration: underline;
-}
-
-/* Footer */
 footer {
-  text-align: center;
-  color: #777;
-  margin-top: 50px;
-  font-size: 0.9rem;
+    text-align: center;
+    padding: 15px;
+    background-color: #202020;
+    font-size: 14px;
+    color: #ccc;
 }

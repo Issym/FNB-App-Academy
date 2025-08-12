@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pine City Zoo — Africa</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <a href="index.html">
+          <img src="images/logo.png" alt="Pine City Zoo logo" class="logo">
+          <div class="brand-text">
+            <h1>Pine City Zoo</h1>
+            <p class="tag">Africa • Wildlife • Conservation</p>
+          </div>
+        </a>
+      </div>
+
+      <button id="menu-toggle" aria-controls="primary-nav" aria-expanded="false" class="menu-btn">Menu</button>
+
+      <nav id="primary-nav" class="nav">
+        <a href="index.html">Home</a>
+        <a href="animals.html">Animals</a>
+        <a href="map.html">Map</a>
+        <a href="places.html">Places</a>
+        <a href="weather.html">Weather</a>
+        <a href="feedback.html">Feedback</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <section class="hero">
+      <div class="hero-media">
+        <img src="images/map.jpg" alt="Pine City Zoo Map" class="hero-image">
+        <div class="hero-overlay">
+          <h2>Welcome to Pine City Zoo</h2>
+          <p class="lead">Explore Africa’s greatest wildlife — discover animals, exhibits and experiences for all ages.</p>
+          <div class="cta-row">
+            <a class="btn primary" href="animals.html">Explore Animals</a>
+            <a class="btn ghost" href="places.html">Plan Your Visit</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured grid">
+      <h2 class="section-title">Featured animals</h2>
+      <div class="cards">
+        <a class="card" href="animals/elephant.html">
+          <img src="images/elephant-tn.jpg" alt="Elephant" loading="lazy">
+          <h3>Elephant</h3>
+          <p>Gentle giants and exhibit highlights.</p>
+        </a>
+
+        <a class="card" href="animals/lion.html">
+          <img src="images/lion-tn.jpg" alt="Lion" loading="lazy">
+          <h3>Lion</h3>
+          <p>The king of the savanna — meet our pride.</p>
+        </a>
+
+        <a class="card" href="animals/giraffe.html">
+          <img src="images/giraffe-tn.jpg" alt="Giraffe" loading="lazy">
+          <h3>Giraffe</h3>
+          <p>Tall ambassadors of the treetops.</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="highlights">
+      <div class="two-col">
+        <article class="panel">
+          <h3>Wildlife Trails</h3>
+          <p>Walk through the Lost Forest, Monkey Trail and the Savanna Loop for immersive encounters.</p>
+          <a class="link" href="places.html">See Places</a>
+        </article>
+
+        <article class="panel">
+          <h3>Cafés & Picnic</h3>
+          <p>Enjoy local flavours at our coffee shop, pizza corner and outdoor restaurants.</p>
+          <a class="link" href="places.html">Visit Restaurants</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="left">
+        <small>&copy; 2025 Pine City Zoo — Protecting wildlife and inspiring visitors.</small>
+      </div>
+      <div class="right">
+        <img src="images/wood-bg.png" alt="" aria-hidden="true" class="footer-texture">
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
