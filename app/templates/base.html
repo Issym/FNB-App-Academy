@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ title or "Shopping Cart" }}</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container">
+      <a href="/" class="brand">Week 8 — Shop</a>
+      <nav>
+        <a href="/">Products</a>
+        <a href="/cart">Cart</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="footer">
+    <div class="container">© 2025 App Academy — Demo store</div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Your Cart</h1>
+{% if not t.lines %}
+  <p>Your cart is empty.</p>
+{% else %}
+<table class="table">
+  <thead>
+    <tr><th>SKU</th><th>Item</th><th>Qty</th><th>Unit</th><th>Total</th></tr>
+  </thead>
+  <tbody>
+    {% for l in t.lines %}
+    <tr>
+      <td>{{ l.sku }}</td>
+      <td>{{ l.name }}</td>
+      <td>
+        <form method="post" action="/cart/set" class="inline">
+          <input type="hidden" name="sku" value="{{ l.sku }}">
+          <input type="number" name="qty" value="{{ l.qty }}" min="0">
+          <button>Update</button>
+        </form>
+      </td>
+      <td>{{ money(l.unit_price) }}</td>
+      <td>{{ money(l.line_total) }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<div class="totals">
+  {% for msg in t.messages %}<div class="note">* {{ msg }}</div>{% endfor %}
+  <div><strong>Subtotal:</strong> {{ money(t.subtotal) }}</div>
+  <div><strong>Discount:</strong> -{{ money(t.discount) }}</div>
+  <div><strong>VAT (15%):</strong> {{ money(t.vat) }}</div>
+  <div><strong>Shipping:</strong> {{ money(t.shipping) }}</div>
+  <div class="grand"><strong>Grand Total:</strong> {{ money(t.grand_total) }}</div>
+</div>
+
+<form method="post" action="/cart/promo" class="row">
+  <input name="code" placeholder="Promo code (WELCOME10, BULK5, FREESHIP)" />
+  <button type="submit">Apply</button>
+</form>
+
+<form method="post" action="/checkout">
+  <button class="primary">Checkout</button>
+</form>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Products</h1>
+<form method="get" class="search">
+  <input type="text" name="q" value="{{ q }}" placeholder="Search by name or SKU">
+  <input type="text" name="category" value="{{ category }}" placeholder="Category (e.g., electronics)">
+  <button type="submit">Search</button>
+</form>
+
+<div class="grid">
+  {% for p in products %}
+  <div class="card">
+    <div class="card-title">{{ p.name }}</div>
+    <div class="muted">SKU {{ p.sku }}</div>
+    <div class="price">R{{ '%.2f'|format(p.price) }} <span class="note">(excl VAT)</span></div>
+    <div class="muted">Stock: {{ p.stock }}</div>
+    <form method="post" action="/cart/add" class="row">
+      <input type="hidden" name="sku" value="{{ p.sku }}">
+      <input type="number" name="qty" value="1" min="1">
+      <button type="submit">Add to Cart</button>
+    </form>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

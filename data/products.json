@@ -1,0 +1,75 @@
+{
+  "P1001": {
+    "name": "Notebook A5",
+    "price": 29.99,
+    "stock": 120,
+    "categories": [
+      "stationery"
+    ]
+  },
+  "P1002": {
+    "name": "Ballpoint Pen (Blue)",
+    "price": 9.99,
+    "stock": 300,
+    "categories": [
+      "stationery"
+    ]
+  },
+  "P1003": {
+    "name": "Highlighter (Yellow)",
+    "price": 14.5,
+    "stock": 200,
+    "categories": [
+      "stationery"
+    ]
+  },
+  "P2001": {
+    "name": "USB Drive 32GB",
+    "price": 129.0,
+    "stock": 80,
+    "categories": [
+      "electronics"
+    ]
+  },
+  "P2002": {
+    "name": "Wireless Mouse",
+    "price": 199.0,
+    "stock": 60,
+    "categories": [
+      "electronics"
+    ]
+  },
+  "P3001": {
+    "name": "Coffee Mug",
+    "price": 89.0,
+    "stock": 150,
+    "categories": [
+      "home"
+    ]
+  },
+  "P3002": {
+    "name": "Water Bottle 750ml",
+    "price": 149.0,
+    "stock": 100,
+    "categories": [
+      "home",
+      "fitness"
+    ]
+  },
+  "P4001": {
+    "name": "T-shirt (M)",
+    "price": 199.0,
+    "stock": 75,
+    "categories": [
+      "apparel"
+    ]
+  },
+  "P4002": {
+    "name": "Cap (One Size)",
+    "price": 129.0,
+    "stock": 90,
+    "categories": [
+      "apparel"
+    ]
+  }
+}

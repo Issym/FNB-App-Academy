@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Order #{{ "%05d"|format(order.id) }} placed 🎉</h1>
+<p>Thanks for your order! Summary:</p>
+<ul>
+  <li>Items (ex VAT, after discounts): {{ money(order.total_ex_vat) }}</li>
+  <li>VAT: {{ money(order.vat) }}</li>
+  <li>Shipping: {{ money(order.shipping) }}</li>
+  <li><strong>Grand Total:</strong> {{ money(order.grand_total) }}</li>
+</ul>
+<a href="/">Continue shopping</a>
+{% endblock %}
